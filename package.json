@@ -1,0 +1,23 @@
+{
+  "name": "detectbus63",
+  "version": "0.0.1",
+  "description": "Goal: Detect Bus 63 passing towards Aidenbachstrasse using Raspi and webcam",
+  "main": "server/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "OpenCV",
+    "RaspberryPi",
+    "Object",
+    "Detection",
+    "Computer",
+    "Vision"
+  ],
+  "author": "Anders Weijnitz",
+  "license": "MIT",
+  "dependencies": {
+    "mjpeg-server": "^0.3.0",
+    "opencv4nodejs": "^4.5.2"
+  }
+}
