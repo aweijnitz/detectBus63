@@ -15,8 +15,9 @@ http.createServer(function (req, res) {
 
     // Return video stream
     if (/stream/.test(req.url)) {
-        for (let i = 0; i < 100; i++) {
+        for (let i = 0; i < 500; i++) {
             wCap.readAsync((err, frame) => {
+                frame = frame.bgrToGray();
                 let jpgBuf = cv.imencode('.JPEG', frame);
                 mjpegReqHandler.write(jpgBuf);
             });
