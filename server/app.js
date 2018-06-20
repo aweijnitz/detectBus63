@@ -20,6 +20,7 @@ http.createServer(function (req, res) {
             wCap.readAsync((err, frameBGR) => {
                 let lowRange = new cv.Vec(10, 0, 0); // BGR
                 let highRange = new cv.Vec(255, 0, 0);
+                frameBGR.cvtColor(cv.COLOR_BGRA2BGR);
                 frameBGR = frameBGR.inRange(lowRange, highRange); //.blur(new cv.Size(3, 3));
                 let blueHist = cv.calcHist(frameBGR, util.getHistAxis(0));
                 let arr = blueHist.getDataAsArray().map(el => el[0]);
